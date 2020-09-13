@@ -51,14 +51,150 @@ Yuya Kinoshita, Toshinori Hosokawa y Hideo Fujiwara, investigadores de la Univer
 
 **4.1. Máquinas de estados finitos**
 
+Una máquina de estados finito es una representación abstracta para manipular símbolos con la finalidad de conocer si una cadena pertenece a un lenguaje o se puede utilizar de forma indistinta. Las máquinas de estados se caracterizan por tener un estado inicial, son capaces de recibir una cadena de símbolos, pueden cambiar de estado por cada elemento leído o pueden permanecer en el mismo estado. Además, tienen un conjunto de estados finales que indican si una cadena pertenece al lenguaje al final de una lectura.
+Existen dos tipos de máquinas de estado, las maquinas finitas deterministas y maquinas finitas no deterministas.
+
 *4.1.1. Máquinas Finitas Determinísticas*
 
-Los circuitos sumadores son circuitos muy utilizados en distintos tipos de sistemas digitales. Para comprender efectivamente el funcionamiento de un circuito sumador, primero se debe entender el funcionamiento de un semisumador. El semisumador realiza únicamente la suma de dos números binarios con un bit cada uno. 
+Estas máquinas reciben de forma secuencial una cadena de símbolos y cambia de estado por cada símbolo leído o también puede permanecer en el mismo estado. Al final de la lectura del estado, la máquina de estados indica si la cadena es aceptada o pertenece al lenguaje que describe la máquina. Si al final de leer todos los símbolos de entrada la maquina está en alguno de los estados finales entonces esa cadena es aceptada, si el estado no es final entonces la cadena no pertenece al lenguaje.
 
-![](https://github.com/aledomesalazar/Producto-de-Unidad_Segundo-Parcial/blob/master/img/WhatsApp%20Image%202020-08-04%20at%2013.26.14.jpeg)
+Los componentes que definen una maquina finita determinista son: 
 
-**Figura 1. Diagrama de bloque de un circuito semisumador**
+A={Q,q0,F,δ,∑}
 
+Donde: 
+
+Q: conjunto finito de estados
+
+q0: estado inicial
+
+F: conjunto finito de estados finales 
+
+∑: alfabeto finito de entrada
+
+δ: función de transición
+
+La forma más sencilla de comprender una maquina finita es a través de un diagrama de transición. Un diagrama de transición es un dígrafo etiquetado con los elementos de una máquina de estados finito. Con esta representación de puede representar cualquier máquina de estados finito determinista, como se muestra a continuación.
+
+![]()
+
+**Figura 1. Diagrama de transición o dígrafo**
+
+En un diagrama de transición existe un nodo por cada estado de Q. Los estados finales están encerrados en un círculo doble. El estado inicial es apuntado por una flecha que no proviene de ningún otro estado. Para cada estado hay exactamente una y sólo una flecha que inicia en un estado y termina en otro estado.
+
+Para describir por completo una función de transición se ocupa una Tabla de Transición. Las columnas se etiquetan con los símbolos de entrada; las filas son etiquetadas con los estados y en las intersecciones se colocan los nuevos estados, como se muestra en la figura a continuación. 
+
+![]()
+
+**Figura 2. Tabla de transición**
+
+Para determinar que una máquina de estados sea una maquina determinista cada estado debe tener el mismo número de flechas saliendo de cada uno de ellos. 
+
+*4.1.2. Máquinas Finitas No Determinísticas*
+
+A diferencia de las maquinas finitas deterministas, donde existe una única forma de llegar de un estado a otro con una entrada y se tiene solo un estado inicial, las maquinas finitas no deterministas no cuentan con estas virtudes, pero son una herramienta de mucha ayuda cuando se requiere diseñar una maquina determinista. Para cada máquina no determinista existe una maquina determinista que lo representa y que acepta el mismo lenguaje. 
+
+Los componentes que definen una maquina finita no determinista son: 
+
+A = {Q,I,F,δ,∑}
+
+Donde: 
+
+Q: conjunto finito de estados
+
+I: conjunto de estados iniciales 
+
+F: conjunto finito de estados finales 
+
+∑: alfabeto finito de entrada
+
+δ: función de transición
+
+Aparentemente existe similitud con una maquina determinista, pero existen diferencias. En las maquinas no deterministas puede existir más de un estado inicial y la función de transición entrega un conjunto de posibles estados. Precisamente esta es la diferencia entre una maquina determinista y una maquina no determinista. Cuando todas las transiciones se encuentran determinadas en una máquina de estados, se tiene una maquina determinista. Si se tiene al menos una transición no definida o indeterminada entonces se tiene una maquina no determinista.
+
+A continuación, un ejemplo de una maquina finita no determinista en dígrafo y su tabla de transición.
+
+![]()
+
+**Figura 3. Diagrama de grafo de una máquina no determinista**
+
+![]()
+
+**Figura 4. Tabla de transición de una máquina no determinista**
+
+(Introducción, Alejandro, & Orozco, n.d.)
+
+**4.2. Máquinas de estado Moore y Mealy**
+
+*4.2.1 Máquina de Mealy*
+
+George Mealy escribió un ensayo en el cual entra en profundidad acerca de crear máquinas de estado desde funciones matemáticas, y describe esas salidas de máquinas de estado en términos de sus entradas. Para diagramar la máquina Mealy, la salida está hecha para depender de ambos: el estado actual y la entrada.
+
+La estructura de una máquina de Mealy es:  
+
+MMe={Q,Ent,Sal,tran,res,qo}
+
+Donde: 
+
+Q: conjunto de estados
+
+Ent: alfabeto de entrada
+
+Sal: alfabeto de salida
+
+tran: función de transición
+
+res: función de respuesta
+
+qo: estado inicial
+
+Gráficamente, se lo representa de la siguiente manera:
+
+![]()
+
+**Figura 5. Esquema explicativo acerca de la máquina de Mealy**
+
+(“Máquinas de Mealy”, n.d.)
+
+(“Máquinas de estado - MCI Capacitación,” n.d.)
+
+*4.2.2 Máquina de Moore*
+
+Edward Moore escribió un ensayo en 1956 titulado Gedanken-experiments on Sequential Machines. En él dice que la salida depende solo del estado, y el próximo estado es dependiente del estado actual y la entrada.
+
+La estructura de una máquina de Moore se lo representa de la siguiente forma: 
+
+MMo = {Q,Ent,Sal,tran,res,qo}
+
+Donde: 
+
+Q: conjunto de estados
+
+Ent: alfabeto de entrada
+
+Sal: alfabeto de salida
+
+tran: función de transición
+
+res: función de respuesta
+
+qo: estado inicial
+
+Gráficamente, se lo representa de la siguiente manera:
+
+![]()
+
+**Figura 6. Esquema explicativo acerca de la máquina de Moore**
+
+Y su tabla sería de la siguiente forma:
+
+![]()
+
+**Figura 5. Tabla de transición de la máquina de Moore**
+
+(“Máquinas de estado - MCI Capacitación,” n.d.)
+
+(“Máquinas de Moore,” n.d.)
 
 **5. DIAGRAMAS**
 
