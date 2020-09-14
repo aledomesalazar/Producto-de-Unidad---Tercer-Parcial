@@ -1,5 +1,5 @@
 # Producto de Unidad - Tercer Parcial
-## Aplicación de la máquina de estados en probelmas reales
+## Aplicación de la máquina de estados en problemas reales
 
 **1. PLANTEAMIENTO DEL PROBLEMA**
 
@@ -283,13 +283,68 @@ Con los estados S4 y S5 se debe tener en consideración que para la entrada 20 s
 
 Para el estado S6 las entradas 5, 10 y 20 se van al estado S7 y sus salidas serán C, 5 (este valor de 5 es por la acumulación de los estados anteriores) y 20 respectivamente. Con las entradas C, Z y A se mantiene en el mismo estado y sus salidas serán nulas (N). Por último, se tiene el estado S7 donde las entradas 5, 10, 20 hacen que la máquina se mantenga en el mismo estado y sus salidas serán 5, 10, 15 respectivamente; esto debido a la acumulación de los estados anteriores. Como este es el estado final la acumulación es la máxima posible por ende cuando se dan las entradas C, Z y A estas pasan a ser estados también de tal manera que con cada entrada su estado siguiente será su mismo valor de entrada; lo mismo aplica para la salida. 
 
+![]()
+
+**Figura 17. Diagrama de grafos, resultado del ejercicio 4**
+
+![]()
+
+**Figura 18. Tabla de transiciones, resultado del ejercicio 4**
+
+*5.1.5.	Construya una máquina de estados finito que modele un circuito de riego automático como el mostrado en la figura. El circuito deberá accionar la bomba en las siguientes condiciones:*
+
+a) *El circuito accionará la bomba solamente cuando la tierra esté seca, pero antes debe comprobar las siguientes condiciones:*
+
+*- i. Para evitar que la bomba se estropee por funcionar en vacío, nunca se accionará la bomba cuando el depósito de agua esté vacío.* 
+
+*- ii. Si hay restricciones en el riego (época de verano), sólo se podrá regar de noche.*
+
+*- iii. En el resto del año (si no hay restricciones) se podrá regar de día y de noche (si la tierra está seca).*
+
+b) *Para la implementación del circuito se dispone de las siguientes entradas:* 
+
+*- i. S: Señal que indica si la tierra está seca: Tierra seca: S=1; Tierra húmeda: S=0*
+
+*- ii. R: Señal que indica si hay restricciones en el riego (es verano): Hay restricciones: R=1 No hay restricciones: R=0* 
+
+*- iii. D: Señal que indica si es de día o de noche: Día: D=1; Noche: D=0*
+
+*- iv. V: Señal que indica si el depósito de agua está vacío: Vacío: V=1; Hay agua: V=0*
+
+c) *Y la salida B, que accionará la bomba para regar: Bomba funcionando: B=1; Bomba apagada B=0.*
+
+Para la construcción de la máquina de estados que permita el riego automático se toma en consideración únicamente los valores en los cuales las condiciones se cumplen para que la bomba funcione (B=1). Para que esto funcione, primero se debe verificar que la tierra se encuentre seca (S=1), esto provoca que se cambie a la siguiente validación o que se compruebe la siguiente condición, pero su salida B tendrá el valor de cero porque no sean comprobado todas las condiciones para que esta funcione. En el caso de que la tierra se encuentre húmeda (S=1), entonces la maquina se mantiene sin hacer ningún cambio y su salida B tendrá el valor de 0.
+
+De ahí sigue la siguiente validación que es comprobar el estado del tanque. Si el tanque se encuentra vacío (V=1), entonces no se produce ningún cambio en la máquina y la salida B tendrá el valor de 0. En cambio, cuando el tanque se encuentra lleno (V=0) se produce un cambio hacia la siguiente validación y la salida B tendrá el valor de 0, esto por la misma razón que con el caso anterior no sean validado todas las condiciones para que la bomba funcione. 
+
+Una vez comprobado que el tanque se encuentra vacío, se comprueba que no haya restricciones. Las restricciones vienen a representar las estaciones del año, en la estación de verano se regará únicamente en la noche, esa es la restricción. Por lo tanto, cuando haya restricciones (R=1), entonces se considera el momento del día en que se vaya a regar; caso contrario (R=0) el momento se desprecia y la salida B será 1. En las restricciones se considera el momento del día como se dijo anteriormente, si es de día (D=1), entonces la salida B será de 0, porque la restricción limita que el riego sea por las noches; caso contrario (D=0) la salida será 1.
+
+![]()
+
+**Figura 19. Diagrama de grafos, resultado del ejercicio 5**
+
+![]()
+
+**Figura 20. Tabla de transiciones, resultado del ejercicio 5**
 
 **6. DESCRIPCIÓN DE PRERREQUISITOS Y CONFIGURACIÓN**
 
+Para esta actividad no es obligatorio la implemetación de un software específico. Sin embargo, se uso la siguiente página para la construcción de los grafos de estado.
+
+- (Pendiente la página)
+
 **7. CONCLUSIONES** 
+
+1.	Se concluye que mediante la precedencia de una tabla de transiciones se construye los grafos de estados y se lo puede establecer de forma inversa. 
+2.	La máquina de estados llega a ser una representación, donde establece si un suceso depende o no de un estado anterior, siendo que las entradas y salidas pueden manejarse con decisiones duales, si o no, o añadir un resultado específico diferente a ellos.
+3.	En la mayoría de aplicaciones, se utiliza las representaciones de Mealy ya que las transiciones y las salidas dependían de las entradas y los estados que se encontraban.
 
 
 **8. RECOMENDACIONES**
+
+1.	Se recomienda usar diagramas de grafos debido a que es más dinámico y entendible representar con 5 estados, a partir de 6 en adelante es más recomendable representar por las tablas ya que lo generaliza.
+2.	Simular estos problemas es muy útil para el desarrollo de la lógica de programación, siendo que mayoría de estos manejan varios if. También es aplicable para circuitos digitales ya que en su mayoría manejan dos estados: verdadero o falso.
+3.	La representación de estados es un inicio para introducir al mundo de la inteligencia artificial ya que cada estado puede ser dependiente del otro o ser independiente, puede inicializarse o no y del mismo puede derivarse en uno o más estados, sirviendo para mejor organización en la toma de decisiones.
 
 
 **9. CRONOGRAMA**
@@ -298,5 +353,103 @@ Para el estado S6 las entradas 5, 10 y 20 se van al estado S7 y sus salidas ser�
 
 **10. BIBLIOGRAFÍA**
 
+- Babakov, R., & Barkalov, A. (2018). Structural representation of synthesis methods of finite state machine with datapath of transitions. Proceedings of 2018 IEEE 9th International Conference on Dependable Systems, Services and Technologies, DESSERT 2018, 229–233. https://doi.org/10.1109/DESSERT.2018.8409134
+- Introducción, B., Alejandro, J., & Orozco, G. (n.d.). Máquinas de Estados Finitos.
+- Kinoshita, Y., Hosokawa, T., & Fujiwara, H. (2019). A Test Generation Method Based on k-Cycle Testing for Finite State Machines. 2019 IEEE 25th International Symposium on On-Line Testing and Robust System Design, IOLTS 2019, 232–235. https://doi.org/10.1109/IOLTS.2019.8854426
+- Máquinas de estado - MCI Capacitación. (n.d.). Retrieved September 5, 2020, from https://cursos.mcielectronics.cl/2019/06/18/maquinas-de-estado/
+- Máquinas de Mealy. (n.d.). Retrieved September 5, 2020, from http://delta.cs.cinvestav.mx/~gmorales/ta/node49.html
+- Máquinas de Moore. (n.d.). Retrieved September 5, 2020, from http://delta.cs.cinvestav.mx/~gmorales/ta/node50.html
+- Smolyakov, I. Y., & Belyaev, S. A. (2019). Design of the software architecture for starcraft video game on the basis of finite state machines. Proceedings of the 2019 IEEE Conference of Russian Young Researchers in Electrical and Electronic Engineering, ElConRus 2019, 356–359. https://doi.org/10.1109/EIConRus.2019.8656866
+
 **11. ANEXOS**
-**
+
+*11.1 Manual de Usuario*
+
+*11.1.1 ¿Cómo realizar los diagramas de estados?*
+
+Para empezar a realizar bien los diagramas de estados de los problemas 1 y 2, primero se debe saber cómo leer bien la tabla. 
+
+![]()
+
+**Figura 21. Tabla de transición**
+
+Donde se encuentra la flecha roja se empieza a leer la tabla de transiciones. En este caso se empieza con el estado S0, luego se lee la flecha de color verde que indica el valor 0 de la entrada. A continuación, se lee la flecha de color azul que indica el estado siguiente, en este caso S0. Por último, se lee la flecha de color negro que indica el valor de la salida que tiene el estado con ese valor de entrada. La interpretación es la siguiente:
+
+“En el estado S0 cuando la entrada tiene el valor de 0 su siguiente estado será S0 y su salida será 1.”
+
+Ahora en el diagrama primero se debe colocar el estado de inicio donde de un círculo. En este caso el estado de inicio es S0. Quedando de la siguiente forma:
+
+![]()
+
+**Figura 22. Representación de un estado**
+
+A continuación, se colocan la flecha que apunta al estado siguiente, en este caso es una retroalimentación por lo tanto la flecha apunta al mismo estado, como se muestra en la siguiente figura.
+
+![]()
+
+**Figura 23. Representación de un estado donde su transición devuelve a la misma**
+
+Se colocan los valores de entrada y de salida encima del cuerpo de la flecha de la siguiente forma 0,1. El 0 representa el valor de entrada y el 1 representa el valor de salida. 
+
+![]()
+
+**Figura 24. Representación de un estado con su flecha de transición representado por su entrada y salida**
+
+Ahora con el valor de entrada 1 se realiza el mismo procedimiento. Quedando la interpretación de la siguiente forma: 
+
+“En el estado S0 cuando la entrada tiene el valor de 1 su siguiente estado será S4 y su salida será 1.”
+
+Para su implementación en el diagrama de estados se realiza el mismo procedimiento descrito anteriormente, quedando el diagrama de la siguiente manera.
+
+![]()
+
+**Figura 25. Representación de dos estados, donde uno tiene dos transiciones**
+
+Una vez acabado el primer estado de la tabla de transiciones se realiza el mismo procedimiento con los demás estados de la tabla.
+
+*11.1.2 ¿Cómo realizar la tabla de transiciones?*
+
+En el problema 3 pide realizar la tabla de transiciones, partiendo del diagrama de estados. Para realizar la tabla primero se deben identificar el número de estados, el número de entradas y el número de salidas. 
+
+![]()
+
+**Figura 26. Diagrama de estados, donde señala la transición de S0 a S1**
+
+En el anterior diagrama se puede observar que hay cuatro estados (S0, S1, S2, S3), dos valores de entrada (0,1) y dos valores de salida (0,1). Se empieza con el estado inicial, en este caso es S0, y se toma como referencia el valor de entrada 0. Se identifica la flecha que posee el valor de 0 en la entrada, en este caso el cuadro de color rojo indica los valores de la flecha a los que la entrada es 0 en estado S0. La dirección de la flecha apunta al estado S1 y el otro número a lado del cero indica la salida, por tanta, cuando hay un 0 en la entrada en el estado S0 su siguiente estado será S1 y su salida será 1. 
+
+La construcción de la tabla debe cumplir con los siguientes aspectos: 
+1.	En la primera columna deben ir los estados. 
+2.	En la columna siguiente las transiciones.
+3.	En la columna siguiente las salidas.
+4.	Debajo de las transiciones y de las salidas debe ir las entradas con sus respectivos valores.
+
+La tabla quedaría de la siguiente forma:
+
+![]()
+
+**Figura 27. Tabla de transición, donde señala las celdas de una entrada **
+
+Para llevar la tabla primero se debe ir con el primer estado que se encuentra señalado con la flecha roja. Luego con el primer valor de entrada el que se encuentra señalado con la flecha en verde. En el diagrama se observó que con una entrada de 0 en el estado S0 su siguiente estado será S1, este dato se debe poner en la casilla donde apunta la flecha azul y el valor de la salida, en este caso 1, debe ir anotado en la casilla que apunta la flecha color negro. 
+
+Quedando de la siguiente forma:
+
+![]()
+
+**Figura 28. Tabla de transición, donde señala el dato de una entrada y el correspondiente resultado de la salida**
+
+Se realiza el mismo procedimiento con el valor de entrada 1 en el estado S0. 
+
+
+![]()
+
+**Figura 29. Diagrama de estados, donde señala la transición de S0 a S3**
+
+Los datos de la entrada 1 en el estado S0 se encuentran encerrados en el cuadro verde. La dirección apunta al estado S4 y el otro número que se encuentra a lado del 1 es el valor de la salida. Se interpreta que en la entrada 1 en el estado S0 su siguiente estado es S4 y su salida es 0. 
+
+Para llevar la tabla se realiza el procedimiento antes descrito para la entrada 0, quedando la tabla de la siguiente forma
+
+![]()
+
+**Figura 30. DTabla de transición, donde señala otro  dato de las entradsa y el correspondiente resultado de la salida**
+
+Una vez finalizado el primer estado se procede a realizar el mismo procedimiento con el resto de estados hasta llevar la tabla de transiciones.
