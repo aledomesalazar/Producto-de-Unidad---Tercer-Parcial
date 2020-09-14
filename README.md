@@ -76,7 +76,7 @@ F: conjunto finito de estados finales
 
 La forma más sencilla de comprender una maquina finita es a través de un diagrama de transición. Un diagrama de transición es un dígrafo etiquetado con los elementos de una máquina de estados finito. Con esta representación de puede representar cualquier máquina de estados finito determinista, como se muestra a continuación.
 
-![]()
+![](https://github.com/aledomesalazar/Producto-de-Unidad---Tercer-Parcial/blob/master/img/WhatsApp%20Image%202020-09-14%20at%2010.52.18.jpeg)
 
 **Figura 1. Diagrama de transición o dígrafo**
 
@@ -84,7 +84,7 @@ En un diagrama de transición existe un nodo por cada estado de Q. Los estados f
 
 Para describir por completo una función de transición se ocupa una Tabla de Transición. Las columnas se etiquetan con los símbolos de entrada; las filas son etiquetadas con los estados y en las intersecciones se colocan los nuevos estados, como se muestra en la figura a continuación. 
 
-![]()
+![](https://github.com/aledomesalazar/Producto-de-Unidad---Tercer-Parcial/blob/master/img/WhatsApp%20Image%202020-09-14%20at%2010.52.23.jpeg)
 
 **Figura 2. Tabla de transición**
 
@@ -114,11 +114,11 @@ Aparentemente existe similitud con una maquina determinista, pero existen difere
 
 A continuación, un ejemplo de una maquina finita no determinista en dígrafo y su tabla de transición.
 
-![]()
+![](https://github.com/aledomesalazar/Producto-de-Unidad---Tercer-Parcial/blob/master/img/WhatsApp%20Image%202020-09-14%20at%2010.52.33.jpeg)
 
 **Figura 3. Diagrama de grafo de una máquina no determinista**
 
-![]()
+![](https://github.com/aledomesalazar/Producto-de-Unidad---Tercer-Parcial/blob/master/img/WhatsApp%20Image%202020-09-14%20at%2010.52.39.jpeg)
 
 **Figura 4. Tabla de transición de una máquina no determinista**
 
@@ -150,7 +150,7 @@ qo: estado inicial
 
 Gráficamente, se lo representa de la siguiente manera:
 
-![]()
+![](https://github.com/aledomesalazar/Producto-de-Unidad---Tercer-Parcial/blob/master/img/WhatsApp%20Image%202020-09-14%20at%2010.52.45.jpeg)
 
 **Figura 5. Esquema explicativo acerca de la máquina de Mealy**
 
@@ -182,13 +182,13 @@ qo: estado inicial
 
 Gráficamente, se lo representa de la siguiente manera:
 
-![]()
+![](https://github.com/aledomesalazar/Producto-de-Unidad---Tercer-Parcial/blob/master/img/WhatsApp%20Image%202020-09-14%20at%2010.52.50.jpeg)
 
 **Figura 6. Esquema explicativo acerca de la máquina de Moore**
 
 Y su tabla sería de la siguiente forma:
 
-![]()
+![](https://github.com/aledomesalazar/Producto-de-Unidad---Tercer-Parcial/blob/master/img/WhatsApp%20Image%202020-09-14%20at%2010.52.53.jpeg)
 
 **Figura 7. Tabla de transición de la máquina de Moore**
 
@@ -200,7 +200,7 @@ Y su tabla sería de la siguiente forma:
 
 *5.1 1.	Dibuje el diagrama de estados para la máquina de estado finito cuya tabla de estados es la siguiente. Partiendo del estado s0, calcula la salida para la cadena de entrada 1000110.*
 
-![]()
+![](https://github.com/aledomesalazar/Producto-de-Unidad---Tercer-Parcial/blob/master/img/WhatsApp%20Image%202020-09-14%20at%2010.53.07.jpeg)
 
 **Figura 8. Tabla de transición del ejercicio 1**
 
@@ -210,7 +210,7 @@ Cuando la entrada es 0 en estado S0, el siguiente estado es S0; esto quiere deci
 
 Para el estado S1 cuando la entrada es 0 el estado siguiente será S0 y la salida será 0. Cuando el valor de la entrada es 1 el estado siguiente será S3 y la salida tendrá el valor de 1. Con la entrada 0 en estado S2 el siguiente estado será S0 y su salida será 0, mientras que para la entrada 1 el estado siguiente será S2 (se mantiene en el mismo estado) y su salida será 0. Para el estado S3 se tiene que con ambos valores de entrada (0 y 1) su siguiente estado será S1 y sus salidas con ambos valores de entrada será 1. Para el ultimo estado S4 cuando el valor de entrada es 0 su siguiente estado será S1 y el valor de su salida será 1 y por último con un valor de entrada de 1 su siguiente estado será S0 y su salida será 0. 
 
-![]()
+![](https://github.com/aledomesalazar/Producto-de-Unidad---Tercer-Parcial/blob/master/img/WhatsApp%20Image%202020-09-14%20at%2010.53.24.jpeg)
 
 **Figura 9. Grafo de estados del ejercicio 1**
 
@@ -218,13 +218,13 @@ Una vez obtenido el grafo de estados, el problema dice que a la entrada S0 se in
 
 El siguiente valor de la entrada es el 1 en estado S0 (esto por la entrada anterior) se observa de nuevo el diagrama de estados. Cuando se ingresa 1 en estado S0 su siguiente estado es S4 y su salida será 1. Del resultado se tiene 11. El siguiente valor de la entrada es 1 en el estado S4 (esto por la entrada anterior), observando el diagrama de estados se tiene que con este valor de entrada su siguiente estado es S0 y su salida será 0, dando el resultado 011. Ahora en la entrada se tiene el valor de 0 en estado S0 (este estado por la entrada anterior), observando el diagrama con el valor de entrada 0 en S0, la maquina se mantiene en el mismo estado y la salida es 1, dando un resultado de 1011. El proceso anterior se repite con las siguientes dos entradas dando un resultado de 11011. Para el bit más significativo el estado cambia al estado S4, debido a que el valor de entrada es 1 y su salida será 1, dando como resultado final 111011 de la entrada 1000110. 
 
-![]()
+![](https://github.com/aledomesalazar/Producto-de-Unidad---Tercer-Parcial/blob/master/img/WhatsApp%20Image%202020-09-14%20at%2010.53.32.jpeg)
 
 **Figura 10. Tabla que describe cada uno de los resultados y la salida acumulada a partir de la entrada 1000110**
 
 *5.1 2.	Dibuje el diagrama de estados para la máquina de estado finito cuya tabla de estados es la siguiente. Partiendo del estado inicial s0, calcula la salida para la cadena de entrada abbccc.*
 
-![]()
+![](https://github.com/aledomesalazar/Producto-de-Unidad---Tercer-Parcial/blob/master/img/WhatsApp%20Image%202020-09-14%20at%2010.53.40.jpeg)
 
 **Figura 12. Tabla de transición del ejercicio 2**
 
@@ -235,19 +235,19 @@ Para el estado S2 con las entradas “a” y “b” se produce un cambio de est
 
 Para el ultimo estado S3 cuando el valor de entrada es “a” su siguiente estado será S2 y su salida será 1. Con un valor de entrada “b” se mantiene en el mismo estado y su salida será 0. Y con valor de entrada “c” en estado S3 su estado siguiente será S0 y su salida será 1. 
 
-![]()
+![](https://github.com/aledomesalazar/Producto-de-Unidad---Tercer-Parcial/blob/master/img/WhatsApp%20Image%202020-09-14%20at%2010.53.50.jpeg)
 
 **Figura 13. Grafo de estados del ejercicio 2**
 
 Una vez obtenido el grafo de estados, el problema dice que a la entrada S0 se ingresa abbccc y pide su salida. Para resolver este problema se empieza con el bit menos significativo y se continua de derecha a izquierda hasta el bit más significativo. El bit menos significativo es “c” en estado S0, este valor de entrada cambia al estado S2 y da a la salida el valor de 1. La siguiente entrada es “c” en estado S2, este valor provoca un cambio al estado S3 y una salida de 0. Con la entrada “c” en estado S3 se cambia al estado S0 y se tendrá una salida de 1. Con una entrada de “b” en estado S0 se regresa al estado S3 obteniendo una salida de 1. Con el valor de “b” como entrada en el estado S3 se mantiene en el mismo estado y se obtiene en la salida el valor de 0. Por último, con la entrada “a” (bit más significativo) en estado S3 se produce un cambio de estado al estado S2 y una salida de 1. Se obtiene como resultado final 101101 de la entrada abbccc.
 
-![]()
+![](https://github.com/aledomesalazar/Producto-de-Unidad---Tercer-Parcial/blob/master/img/WhatsApp%20Image%202020-09-14%20at%2010.54.01.jpeg)
 
 **Figura 14. Tabla que describe cada uno de los resultados y la salida acumulada a partir de la entrada abbccc**
 
 *5.1 3. Halle la tabla de estados para la máquina de estado finito cuyo diagrama de estados es:*
 
-![]()
+![](https://github.com/aledomesalazar/Producto-de-Unidad---Tercer-Parcial/blob/master/img/WhatsApp%20Image%202020-09-14%20at%2010.54.11.jpeg)
 
 **Figura 15. Tabla de transición del ejercicio 3**
 
@@ -263,7 +263,7 @@ Por último, queda el estado S3 donde se empieza con el valor de 0, se puede apr
 
 Comprendida toda la información del diagrama de estados se procede a llenar la tabla de transiciones. La tabla se encuentra constituida por los estados que conforman la primera columna, la transición que ocupa la segunda columna y la salida que ocupa la columna final. Tanto en la columna de transición como la de salida debe ir los valores de la entrada (0,1). 
 
-![]()
+![](https://github.com/aledomesalazar/Producto-de-Unidad---Tercer-Parcial/blob/master/img/WhatsApp%20Image%202020-09-14%20at%2010.54.20.jpeg)
 
 **Figura 16.Diagrama de grafos, resultado del ejercicio 3**
 
@@ -283,11 +283,11 @@ Con los estados S4 y S5 se debe tener en consideración que para la entrada 20 s
 
 Para el estado S6 las entradas 5, 10 y 20 se van al estado S7 y sus salidas serán C, 5 (este valor de 5 es por la acumulación de los estados anteriores) y 20 respectivamente. Con las entradas C, Z y A se mantiene en el mismo estado y sus salidas serán nulas (N). Por último, se tiene el estado S7 donde las entradas 5, 10, 20 hacen que la máquina se mantenga en el mismo estado y sus salidas serán 5, 10, 15 respectivamente; esto debido a la acumulación de los estados anteriores. Como este es el estado final la acumulación es la máxima posible por ende cuando se dan las entradas C, Z y A estas pasan a ser estados también de tal manera que con cada entrada su estado siguiente será su mismo valor de entrada; lo mismo aplica para la salida. 
 
-![]()
+![](https://github.com/aledomesalazar/Producto-de-Unidad---Tercer-Parcial/blob/master/img/WhatsApp%20Image%202020-09-14%20at%2010.54.33.jpeg)
 
 **Figura 17. Diagrama de grafos, resultado del ejercicio 4**
 
-![]()
+![](https://github.com/aledomesalazar/Producto-de-Unidad---Tercer-Parcial/blob/master/img/WhatsApp%20Image%202020-09-14%20at%2010.54.27.jpeg)
 
 **Figura 18. Tabla de transiciones, resultado del ejercicio 4**
 
@@ -319,11 +319,11 @@ De ahí sigue la siguiente validación que es comprobar el estado del tanque. Si
 
 Una vez comprobado que el tanque se encuentra vacío, se comprueba que no haya restricciones. Las restricciones vienen a representar las estaciones del año, en la estación de verano se regará únicamente en la noche, esa es la restricción. Por lo tanto, cuando haya restricciones (R=1), entonces se considera el momento del día en que se vaya a regar; caso contrario (R=0) el momento se desprecia y la salida B será 1. En las restricciones se considera el momento del día como se dijo anteriormente, si es de día (D=1), entonces la salida B será de 0, porque la restricción limita que el riego sea por las noches; caso contrario (D=0) la salida será 1.
 
-![]()
+![](https://github.com/aledomesalazar/Producto-de-Unidad---Tercer-Parcial/blob/master/img/WhatsApp%20Image%202020-09-14%20at%2010.54.43.jpeg)
 
 **Figura 19. Diagrama de grafos, resultado del ejercicio 5**
 
-![]()
+![](https://github.com/aledomesalazar/Producto-de-Unidad---Tercer-Parcial/blob/master/img/WhatsApp%20Image%202020-09-14%20at%2010.54.51.jpeg)
 
 **Figura 20. Tabla de transiciones, resultado del ejercicio 5**
 
@@ -338,7 +338,6 @@ Para esta actividad no es obligatorio la implemetación de un software específi
 1.	Se concluye que mediante la precedencia de una tabla de transiciones se construye los grafos de estados y se lo puede establecer de forma inversa. 
 2.	La máquina de estados llega a ser una representación, donde establece si un suceso depende o no de un estado anterior, siendo que las entradas y salidas pueden manejarse con decisiones duales, si o no, o añadir un resultado específico diferente a ellos.
 3.	En la mayoría de aplicaciones, se utiliza las representaciones de Mealy ya que las transiciones y las salidas dependían de las entradas y los estados que se encontraban.
-
 
 **8. RECOMENDACIONES**
 
@@ -369,7 +368,7 @@ Para esta actividad no es obligatorio la implemetación de un software específi
 
 Para empezar a realizar bien los diagramas de estados de los problemas 1 y 2, primero se debe saber cómo leer bien la tabla. 
 
-![]()
+![](https://github.com/aledomesalazar/Producto-de-Unidad---Tercer-Parcial/blob/master/img/WhatsApp%20Image%202020-09-14%20at%2010.55.05.jpeg)
 
 **Figura 21. Tabla de transición**
 
@@ -379,19 +378,19 @@ Donde se encuentra la flecha roja se empieza a leer la tabla de transiciones. En
 
 Ahora en el diagrama primero se debe colocar el estado de inicio donde de un círculo. En este caso el estado de inicio es S0. Quedando de la siguiente forma:
 
-![]()
+![](https://github.com/aledomesalazar/Producto-de-Unidad---Tercer-Parcial/blob/master/img/WhatsApp%20Image%202020-09-14%20at%2010.55.12.jpeg)
 
 **Figura 22. Representación de un estado**
 
 A continuación, se colocan la flecha que apunta al estado siguiente, en este caso es una retroalimentación por lo tanto la flecha apunta al mismo estado, como se muestra en la siguiente figura.
 
-![]()
+![](https://github.com/aledomesalazar/Producto-de-Unidad---Tercer-Parcial/blob/master/img/WhatsApp%20Image%202020-09-14%20at%2010.55.16.jpeg)
 
 **Figura 23. Representación de un estado donde su transición devuelve a la misma**
 
 Se colocan los valores de entrada y de salida encima del cuerpo de la flecha de la siguiente forma 0,1. El 0 representa el valor de entrada y el 1 representa el valor de salida. 
 
-![]()
+![](https://github.com/aledomesalazar/Producto-de-Unidad---Tercer-Parcial/blob/master/img/WhatsApp%20Image%202020-09-14%20at%2010.55.20.jpeg)
 
 **Figura 24. Representación de un estado con su flecha de transición representado por su entrada y salida**
 
@@ -401,7 +400,7 @@ Ahora con el valor de entrada 1 se realiza el mismo procedimiento. Quedando la i
 
 Para su implementación en el diagrama de estados se realiza el mismo procedimiento descrito anteriormente, quedando el diagrama de la siguiente manera.
 
-![]()
+![](https://github.com/aledomesalazar/Producto-de-Unidad---Tercer-Parcial/blob/master/img/WhatsApp%20Image%202020-09-14%20at%2010.55.25.jpeg)
 
 **Figura 25. Representación de dos estados, donde uno tiene dos transiciones**
 
@@ -411,7 +410,7 @@ Una vez acabado el primer estado de la tabla de transiciones se realiza el mismo
 
 En el problema 3 pide realizar la tabla de transiciones, partiendo del diagrama de estados. Para realizar la tabla primero se deben identificar el número de estados, el número de entradas y el número de salidas. 
 
-![]()
+![](https://github.com/aledomesalazar/Producto-de-Unidad---Tercer-Parcial/blob/master/img/WhatsApp%20Image%202020-09-14%20at%2010.55.31.jpeg)
 
 **Figura 26. Diagrama de estados, donde señala la transición de S0 a S1**
 
@@ -425,7 +424,7 @@ La construcción de la tabla debe cumplir con los siguientes aspectos:
 
 La tabla quedaría de la siguiente forma:
 
-![]()
+![](https://github.com/aledomesalazar/Producto-de-Unidad---Tercer-Parcial/blob/master/img/WhatsApp%20Image%202020-09-14%20at%2010.55.38.jpeg)
 
 **Figura 27. Tabla de transición, donde señala las celdas de una entrada **
 
@@ -433,14 +432,13 @@ Para llevar la tabla primero se debe ir con el primer estado que se encuentra se
 
 Quedando de la siguiente forma:
 
-![]()
+![](https://github.com/aledomesalazar/Producto-de-Unidad---Tercer-Parcial/blob/master/img/WhatsApp%20Image%202020-09-14%20at%2010.55.42.jpeg)
 
 **Figura 28. Tabla de transición, donde señala el dato de una entrada y el correspondiente resultado de la salida**
 
 Se realiza el mismo procedimiento con el valor de entrada 1 en el estado S0. 
 
-
-![]()
+![](https://github.com/aledomesalazar/Producto-de-Unidad---Tercer-Parcial/blob/master/img/WhatsApp%20Image%202020-09-14%20at%2010.55.53.jpeg)
 
 **Figura 29. Diagrama de estados, donde señala la transición de S0 a S3**
 
@@ -448,7 +446,7 @@ Los datos de la entrada 1 en el estado S0 se encuentran encerrados en el cuadro 
 
 Para llevar la tabla se realiza el procedimiento antes descrito para la entrada 0, quedando la tabla de la siguiente forma
 
-![]()
+![](https://github.com/aledomesalazar/Producto-de-Unidad---Tercer-Parcial/blob/master/img/WhatsApp%20Image%202020-09-14%20at%2010.55.59.jpeg)
 
 **Figura 30. DTabla de transición, donde señala otro  dato de las entradsa y el correspondiente resultado de la salida**
 
