@@ -348,7 +348,7 @@ Para esta actividad no es obligatorio la implemetación de un software específi
 
 **9. CRONOGRAMA**
 
-![]()
+![](https://github.com/aledomesalazar/Producto-de-Unidad---Tercer-Parcial/blob/master/img/WhatsApp%20Image%202020-09-14%20at%2013.51.45.jpeg)
 
 **10. BIBLIOGRAFÍA**
 
