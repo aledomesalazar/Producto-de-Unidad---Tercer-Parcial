@@ -218,7 +218,7 @@ Una vez obtenido el grafo de estados, el problema dice que a la entrada S0 se in
 
 El siguiente valor de la entrada es el 1 en estado S0 (esto por la entrada anterior) se observa de nuevo el diagrama de estados. Cuando se ingresa 1 en estado S0 su siguiente estado es S4 y su salida será 1. Del resultado se tiene 11. El siguiente valor de la entrada es 1 en el estado S4 (esto por la entrada anterior), observando el diagrama de estados se tiene que con este valor de entrada su siguiente estado es S0 y su salida será 0, dando el resultado 011. Ahora en la entrada se tiene el valor de 0 en estado S0 (este estado por la entrada anterior), observando el diagrama con el valor de entrada 0 en S0, la maquina se mantiene en el mismo estado y la salida es 1, dando un resultado de 1011. El proceso anterior se repite con las siguientes dos entradas dando un resultado de 11011. Para el bit más significativo el estado cambia al estado S4, debido a que el valor de entrada es 1 y su salida será 1, dando como resultado final 1110011 de la entrada 1000110. 
 
-![](https://github.com/aledomesalazar/Producto-de-Unidad---Tercer-Parcial/blob/master/img/WhatsApp%20Image%202020-09-14%20at%2010.53.32.jpeg)
+![](https://github.com/aledomesalazar/Producto-de-Unidad---Tercer-Parcial/blob/master/img/WhatsApp%20Image%202020-09-15%20at%2014.03.38.jpeg)
 
 **Figura 10. Tabla que describe cada uno de los resultados y la salida acumulada a partir de la entrada 1000110**
 
@@ -323,7 +323,7 @@ Una vez comprobado que el tanque se encuentra vacío, se comprueba que no haya r
 
 **Figura 19. Diagrama de grafos, resultado del ejercicio 5**
 
-![](https://github.com/aledomesalazar/Producto-de-Unidad---Tercer-Parcial/blob/master/img/WhatsApp%20Image%202020-09-14%20at%2010.54.51.jpeg)
+![](https://github.com/aledomesalazar/Producto-de-Unidad---Tercer-Parcial/blob/master/img/WhatsApp%20Image%202020-09-15%20at%2013.55.08.jpeg)
 
 **Figura 20. Tabla de transiciones, resultado del ejercicio 5**
 
