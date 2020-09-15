@@ -200,7 +200,7 @@ Y su tabla sería de la siguiente forma:
 
 *5.1 1.	Dibuje el diagrama de estados para la máquina de estado finito cuya tabla de estados es la siguiente. Partiendo del estado s0, calcula la salida para la cadena de entrada 1000110.*
 
-![](https://github.com/aledomesalazar/Producto-de-Unidad---Tercer-Parcial/blob/master/img/WhatsApp%20Image%202020-09-14%20at%2010.53.07.jpeg)
+![](https://github.com/aledomesalazar/Producto-de-Unidad---Tercer-Parcial/blob/master/img/WhatsApp%20Image%202020-09-14%20at%2010.53.13.jpeg)
 
 **Figura 8. Tabla de transición del ejercicio 1**
 
