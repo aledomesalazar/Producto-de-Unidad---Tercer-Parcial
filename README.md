@@ -331,7 +331,7 @@ Una vez comprobado que el tanque se encuentra vacío, se comprueba que no haya r
 
 Para esta actividad no es obligatorio la implemetación de un software específico. Sin embargo, se uso la siguiente página para la construcción de los grafos de estado.
 
-- (Pendiente la página)
+- https://creately.com/
 
 **7. CONCLUSIONES** 
 
